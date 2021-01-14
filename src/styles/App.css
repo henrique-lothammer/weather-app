@@ -1,0 +1,133 @@
+.App{
+  min-height: 100vh;
+}
+
+.cities{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.cities li{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 220px;
+  height: 320px;
+  padding: 20px;
+  border-radius:10px;
+  margin: 5px;
+
+  color: #FFF;
+  background-color: rgba(174,177,184,0.5);
+
+  overflow: hidden;
+
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+.cities li .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 1;
+
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+.cities li:hover{
+  background: rgba(216,52,1,0.5);
+}
+
+.cities li:hover .content{
+  opacity: 0.2;
+}
+
+.cities li:hover .delete_btn{
+  top: -webkit-calc(50% - 30px);
+  left: -webkit-calc(50% - 50px);
+}
+
+.cities li .delete_btn{
+  position: absolute;
+  top: -webkit-calc(50% - 30px);
+  left: -50%;
+  z-index: 2;
+
+  cursor: pointer;
+  
+  width: 100px;
+  height: 60px;
+  border-radius: 5px;
+  background: #d83401;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+.cities li img{
+  width: 75px;
+  height: auto;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.cities li{
+  font-size:0.8em;
+}
+
+.cities li .temperature{
+  font-size:2em;
+}
+
+.cities li .location{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cities li .location .city{
+  font-size:1em;
+}
+
+.cities li .location .country{
+  font-size:0.8em;
+}
+
+@media only screen and (max-width: 530px) {
+  .cities{
+    flex-direction: column;
+  }
+  .cities li{
+    flex: 1;
+    width: 100%;
+    margin:5px 0;
+    box-sizing: border-box;
+  }
+
+  .cities li .precipitation{
+    text-align: center;
+  }
+
+  .cities li .location{
+    align-items: flex-end;
+  }
+
+  .cities li .location .country{
+    text-align: right;
+  }
+}

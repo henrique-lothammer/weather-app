@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 25px;
+  text-rendering: optimizelegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+
+  background: rgb(57,65,90);
+  background: linear-gradient(360deg, rgba(57,65,90,1) 0%, rgba(174,177,184,1) 100%);
+}
+
+input, button{
+  outline: 0;
+}
+
+header{
+  padding: 20px;
+}
+
+.wrapper{
+  max-width: 1100px;
+  min-width: 350px;
+  margin: 0 auto;
+}
