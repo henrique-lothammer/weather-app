@@ -14,7 +14,7 @@ To run this project, install it locally using yarn:
 
 ```
 # Install dependencies
-$ yarn install
+$ yarn
 
 # Run the server
 $ yarn dev
