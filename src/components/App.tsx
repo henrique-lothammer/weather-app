@@ -40,7 +40,7 @@ const App: React.FC = () => {
       // VVbpgpZAj7I0sH8zAYiyo5iEzz0oL02G
       // 381G8GmAhLkqmENuLwTLj10R38T9FGIP
       const response = await api.get(`/currentconditions/v1/${id}?apikey=381G8GmAhLkqmENuLwTLj10R38T9FGIP`);
-      console.log('weatherApi',response);
+      
       const {
         WeatherText: weatherText,
         WeatherIcon: weatherIcon,
@@ -57,7 +57,6 @@ const App: React.FC = () => {
       return weatherObj;
     } catch (error) {
       
-      console.log(error.response);
       if(error.response.status === 403){
         addToast('Limit of API requisitions reached, please try again later.', { appearance: 'error' })
       }else{
@@ -104,10 +103,6 @@ const App: React.FC = () => {
     localStorage.setItem('weather-list',JSON.stringify(list));
   
   },[list, getWeatherDataFromRegionItem])
-  
-  useEffect(()=>{
-    console.log('weatherList on useeffect',weatherList);
-  },[weatherList]);
 
   return (
     <div className="App">

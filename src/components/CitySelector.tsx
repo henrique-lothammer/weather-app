@@ -49,7 +49,6 @@ const CitySelector: React.FC<ListProps> = ({list,setList}) =>{
     if (inputValue.length < 3) return;
 
     const response = await api.get(`/locations/v1/cities/autocomplete?apikey=VVbpgpZAj7I0sH8zAYiyo5iEzz0oL02G&q=${inputValue}`);
-    console.log(response);
 
     let responseObj:Array<OptionTypeBase> = [];
     
