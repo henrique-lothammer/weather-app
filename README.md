@@ -1,7 +1,7 @@
 [See it live](https://wheather-app-7748b1.netlify.app/)
 
 ## :computer: General info
-A simple weather app based on accuweather api.
+A simple weather app based on accuweather api. You can add and delete weathers according to city locations. Also persist data on LocalStorage.
 	
 ## :rocket: Technologies
 Project is created with:
